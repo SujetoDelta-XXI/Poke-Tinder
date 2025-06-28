@@ -61,7 +61,7 @@
             android:layout_height="50dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/background_rounded_edit_text"
-            android:hint="Correo electrónico"
+            android:hint="@string/user_email"
             android:inputType="textEmailAddress"
             android:paddingHorizontal="15dp" />
 
@@ -71,7 +71,7 @@
             android:layout_height="50dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/background_rounded_edit_text"
-            android:hint="Contraseña"
+            android:hint="@string/user_password"
             android:inputType="textPassword"
             android:paddingHorizontal="15dp" />
 
@@ -81,7 +81,7 @@
             android:layout_height="50dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/background_rounded_edit_text"
-            android:hint="Repetir contraseña"
+            android:hint="@string/confirm_password"
             android:inputType="textPassword"
             android:paddingHorizontal="15dp" />
 
@@ -93,7 +93,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/background_rounded_edit_text"
-        android:text="Registrar"
+        android:text="@string/register"
         android:textAllCaps="false"
         android:textColor="@android:color/holo_red_dark"
         app:backgroundTint="#f0f0f0"
@@ -101,11 +101,12 @@
         app:layout_constraintBottom_toBottomOf="parent"/>
 
     <Button
+        android:id="@+id/btnAlreadyHaveAccount"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/background_rounded_edit_text"
-        android:text="Ya tengo una cuenta"
+        android:text="@string/already_have_account"
         android:textAllCaps="false"
         android:textColor="@android:color/holo_blue_dark"
         app:backgroundTint="#f0f0f0"

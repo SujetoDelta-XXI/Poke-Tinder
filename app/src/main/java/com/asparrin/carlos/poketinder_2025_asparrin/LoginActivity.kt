@@ -22,15 +22,15 @@ class LoginActivity : AppCompatActivity() {
 
     private fun observeValues() {
         loginViewModel.inputsError.observe(this) {
-            Toast.makeText(this, "Ingrese los datos completos", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.error_complete_data), Toast.LENGTH_SHORT).show()
         }
 
         loginViewModel.authError.observe(this) {
-            Toast.makeText(this, "Error usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.error_invalid_credentials), Toast.LENGTH_SHORT).show()
         }
 
         loginViewModel.registerError.observe(this) {
-            Toast.makeText(this, "Usuario no registrado", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.error_user_not_registered), Toast.LENGTH_SHORT).show()
         }
 
         loginViewModel.loginSuccess.observe(this) {

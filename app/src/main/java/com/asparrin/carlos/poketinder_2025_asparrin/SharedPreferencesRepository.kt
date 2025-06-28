@@ -37,4 +37,17 @@ class SharedPreferencesRepository {
             .putString(USER_PASSWORD_KEY, password)
             .apply()
     }
+
+    fun isUserRegistered(email: String): Boolean {
+        val existingEmail = getUserEmail()
+        return existingEmail.isNotEmpty() && existingEmail == email
+    }
+
+    fun clearUserData() {
+        sharedPreferences
+            .edit()
+            .remove(USER_EMAIL_KEY)
+            .remove(USER_PASSWORD_KEY)
+            .apply()
+    }
 }
